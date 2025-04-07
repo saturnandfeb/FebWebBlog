@@ -1,0 +1,30 @@
+body {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+h1 {
+    color:gainsboro;
+    background-color: black;
+    margin-left: 3%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+p {
+     color:gainsboro;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+     padding-left: 3%;
+}
+
+.home {
+    color: gainsboro;
+    background-color: gainsboro;
+    font-size: 19px;
+    margin-left: 3%;
+    margin-top: 5%;
+    padding-left: 1%;
+    
+}
+

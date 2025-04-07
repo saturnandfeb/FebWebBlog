@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Web</title>
+    <link rel = "stylesheet" href="style/main.css">
+    
+</head>
+<body>
+    <h1>WELCOME TO MY BLOG</h1>
+    <hr>
+    <p class="discrip">Enjoy your time here!</p>
+
+    
+     <div class="about">  <a href="/about"> About </a></div>
+
+     <h2> Create a New Post</h2>
+
+     <div class="container">
+     <form action="/posts" method="POST">
+         <label for = "tname" id="ptitle">Title</label>
+            <input type="text" id="tname" name="title" placeholder="Post Title" required>
+        <br><br>
+            <label for = "content" id="pcontent">Content</label>
+        <textarea name="content" id="content" placeholder="Post Content" required></textarea>
+        <br><br>
+        <button type="submit">Create Post</button>
+    </form>
+</div>
+
+    <h2> Posts </h2>
+    <br><hr><br>
+    
+      
+          <ul id="post-lists">
+        <% posts.forEach((post, index) => { %>
+           
+
+           <li>
+                <h3> <%= post.title %></h3>
+            <p> <%= post.content %> </p>
+            <a href="/posts/edit/<%= index %>" class="button">Edit</a>
+            <form action="/posts/delete/<%= index %>" method="POST" style="display:inline;">
+                <button type="submit">Delete</button> <!-- Delete button -->
+            </li>
+      <%  }) %>
+    </ul>
+
+<br><hr><br>
+
+
+<div class="bottom my-0">
+    <footer class="py-5">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="https://www.linkedin.com/in/sehar-y-204084346?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BC80slltDSlObFm7MxLmA%2BA%3D%3D" class="nav-link px-2 text-body-secondary ">LinkedIn</a></li>
+        <li class="nav-item"><a href="https://www.instagram.com/seharwanii/?next=%2F" class="nav-link px-2 text-body-secondary">Instagram</a></li>
+        <li class="nav-item"><a href="https://x.com/seh_ar_y" class="nav-link px-2 text-body-secondary"> X </a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© Sehar Younis Wani</p>
+    </footer>
+  </div>
+</body>
+</html>
